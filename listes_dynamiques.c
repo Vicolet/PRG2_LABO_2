@@ -128,12 +128,16 @@ Status supprimerEnTete(Liste* liste, Info* info){
          free(liste->tete);
          liste->tete = NULL;
          liste->queue = NULL;
+
+         return OK;
       }else{
          Element* eptr = liste->tete;
          *info = eptr->info;
          liste->tete = liste->tete->suivant;
          free(eptr);
          liste->tete->precedent = NULL;
+
+         return OK;
       }
    }
 }
@@ -146,12 +150,16 @@ Status supprimerEnQueue(Liste* liste, Info* info){
          free(liste->queue);
          liste->tete = NULL;
          liste->queue = NULL;
+
+         return OK;
       }else{
          Element* eptr = liste->queue;
          *info = liste->queue->info;
          liste->queue = liste->queue->precedent;
          free(eptr);
          liste->queue->suivant = NULL;
+
+         return OK;
       }
    }
 }

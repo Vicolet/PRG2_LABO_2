@@ -13,7 +13,6 @@
  -----------------------------------------------------------------------------------
 */
 #include <stdlib.h>
-#include <malloc.h>
 #include "listes_dynamiques.h"
 
 Liste* initialiser(void){
@@ -23,7 +22,11 @@ Liste* initialiser(void){
 }
 
 bool estVide(const Liste* liste){
-   if()
+   if(liste->tete == NULL && liste->queue == NULL){
+      return true;
+   }
+
+   return false;
 }
 
 size_t longueur(const Liste* liste){
@@ -35,11 +38,55 @@ void afficher(const Liste* liste, Mode mode){
 }
 
 Status insererEnTete(Liste* liste, const Info* info){
+   // vérifier si la liste est vide
+   // si liste vide calloc un "Elements" et tete = calloc
 
+   // si liste non vide, calloc un "Elements" et tmp = tete, tete = calloc, tete
+   // .suivant = tmp
+
+   Element* eptr = (Element*) calloc(1, sizeof(Element));
+   if(eptr != NULL) {
+      if (estVide(liste)) {
+         liste->tete = eptr;
+         liste->queue = eptr;
+         liste->tete->info = *info;
+
+         return OK;
+      } else {
+         Element *tmp = liste->tete;
+         liste->tete = eptr;
+         liste->tete->suivant = tmp;
+         liste->tete->suivant->precedent = liste->tete;
+         liste->tete->info = *info;
+
+         return OK;
+      }
+   }else{
+      return MEMOIRE_INSUFFISANTE;
+   }
 }
 
 Status insererEnQueue(Liste* liste, const Info* info){
+   Element* eptr = (Element*) calloc(1, sizeof(Element));
+   if(eptr != NULL){
+      if(estVide(liste)){
+         liste->tete = eptr;
+         liste->queue = eptr;
+         liste->queue->info = *info;
 
+         return OK;
+      }else{
+         Element* tmp = liste->queue;
+         liste->queue = eptr;
+         liste->queue->precedent = tmp;
+         liste->queue->precedent->suivant = liste->queue;
+         liste->queue->info = *info;
+
+         return OK;
+      }
+   }else{
+      return MEMOIRE_INSUFFISANTE;
+   }
 }
 
 Status supprimerEnTete(Liste* liste, Info* info){

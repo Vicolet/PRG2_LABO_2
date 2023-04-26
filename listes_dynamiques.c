@@ -1,18 +1,29 @@
-//
-// Created by Galas on 26.04.2023.
-//
+/*
+ -----------------------------------------------------------------------------------
+ Nom du fichier : listes_dynamiques.c
+ Auteur(s)      : Romain Fleury, Victor Nicolet
+ Date creation  : 26.04.2023
+
+ Description    : Librairie permettant la gestion de listes doublement chaînées
+                  non circulaires
+
+ Remarque(s)    : -
+
+ Compilateur    : Mingw-w64 gcc 12.2.0
+ -----------------------------------------------------------------------------------
+*/
 #include <stdlib.h>
 #include <malloc.h>
 #include "listes_dynamiques.h"
 
 Liste* initialiser(void){
-   Liste* l = (Liste*) malloc(1, sizeof(Liste));
+   Liste* l = (Liste*) calloc(1, sizeof(Liste));
 
    return l;
 }
 
 bool estVide(const Liste* liste){
-
+   if()
 }
 
 size_t longueur(const Liste* liste){

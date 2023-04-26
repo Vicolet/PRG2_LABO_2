@@ -13,8 +13,14 @@
  -----------------------------------------------------------------------------------
 */
 #include <stdio.h>
+#include "listes_dynamiques.h"
 
 int main() {
-   printf("Hello, World!\n");
+   Liste* lptr = initialiser();
+
+   printf("lptr : 0x%p \n", lptr);
+   printf("lptr.tete : 0x%p \n", lptr->tete);
+   printf("lptr.queue : 0x%p \n", lptr->queue);
+
    return 0;
 }

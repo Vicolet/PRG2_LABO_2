@@ -16,6 +16,7 @@
 #include "listes_dynamiques.h"
 
 bool critere(size_t pos, const Info *n){
+   //return true;
    if(pos % 2 == 0 || *n > 1 && *n < 6){
       return true;
    }
@@ -31,7 +32,7 @@ int main() {
    printf("lptr.queue : 0x%p \n", lptr->queue);
 
    printf("Liste est vide : %d \n", estVide(lptr));
-   printf("Taille de la liste : %d\n", longueur(lptr));
+   printf("Taille de la liste : %lld\n", longueur(lptr));
 
    // Insérer en tête
    const Info i = 7;
@@ -41,7 +42,7 @@ int main() {
    printf("Element suivant : 0x%p \n", lptr->tete->suivant);
    printf("Element precedent : 0x%p \n", lptr->tete->suivant);
    printf("Liste est vide : %d \n", estVide(lptr));
-   printf("Taille de la liste : %d\n", longueur(lptr));
+   printf("Taille de la liste : %lld\n", longueur(lptr));
 
    const Info j = 6;
    insererEnTete(lptr, &j);
@@ -51,7 +52,7 @@ int main() {
           lptr->tete->suivant->info);
    printf("Element precedent : 0x%p \n", lptr->tete->precedent);
    printf("Liste est vide : %d \n", estVide(lptr));
-   printf("Taille de la liste : %d\n", longueur(lptr));
+   printf("Taille de la liste : %lld\n", longueur(lptr));
 
    const Info y = 2;
    insererEnQueue(lptr, &y);
@@ -67,7 +68,7 @@ int main() {
           lptr->tete->suivant->suivant->info);
    printf("Queue : 0x%p, %d\n", lptr->queue, lptr->queue->info);
    printf("Liste est vide : %d \n", estVide(lptr));
-   printf("Taille de la liste : %d\n", longueur(lptr));
+   printf("Taille de la liste : %lld\n", longueur(lptr));
 
    // Supprimer tete
    Info x;
@@ -76,14 +77,14 @@ int main() {
    printf("Prec: 0x%p\n", lptr->tete->precedent);
    printf("Tete: 0x%p, %d\n", lptr->tete, lptr->tete->info);
    printf("Suiv: 0x%p, %d\n", lptr->tete->suivant, lptr->tete->suivant->info);
-   printf("Taille de la liste : %d\n", longueur(lptr));
+   printf("Taille de la liste : %lld\n", longueur(lptr));
 
    // Supprimer queue
    supprimerEnQueue(lptr, &x);
    printf("\nPrec: 0x%p\n", lptr->tete->precedent);
    printf("Tete: 0x%p, %d\n", lptr->tete, lptr->tete->info);
    printf("Suiv: 0x%p\n", lptr->tete->suivant);
-   printf("Taille de la liste : %d\n", longueur(lptr));
+   printf("Taille de la liste : %lld\n", longueur(lptr));
 
    // Vider
    insererEnTete(lptr, &i);
@@ -104,9 +105,9 @@ int main() {
    printf("queue: 0x%p\n", lptr->queue);
    */
 
-   printf("\ntaille: %d\n", longueur(lptr));
+   printf("\ntaille: %lld\n", longueur(lptr));
    vider(lptr, 0);
-   printf("\ntaille: %d\n", longueur(lptr));
+   printf("\ntaille: %lld\n", longueur(lptr));
 
    // égalité
    Liste* l2ptr = initialiser();

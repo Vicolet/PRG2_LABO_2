@@ -30,7 +30,21 @@ bool estVide(const Liste* liste){
 }
 
 size_t longueur(const Liste* liste){
-
+   if(estVide(liste)){
+      return 0;
+   }else{
+      Element* e = liste->tete;
+      if(e->suivant == NULL){
+         return 1;
+      }else{
+         size_t compteur = 1;
+         while(e->suivant != NULL){
+            ++compteur;
+            e = e->suivant;
+         }
+         return compteur;
+      }
+   }
 }
 
 void afficher(const Liste* liste, Mode mode){
@@ -38,12 +52,6 @@ void afficher(const Liste* liste, Mode mode){
 }
 
 Status insererEnTete(Liste* liste, const Info* info){
-   // vérifier si la liste est vide
-   // si liste vide calloc un "Elements" et tete = calloc
-
-   // si liste non vide, calloc un "Elements" et tmp = tete, tete = calloc, tete
-   // .suivant = tmp
-
    Element* eptr = (Element*) calloc(1, sizeof(Element));
    if(eptr != NULL) {
       if (estVide(liste)) {
@@ -90,7 +98,11 @@ Status insererEnQueue(Liste* liste, const Info* info){
 }
 
 Status supprimerEnTete(Liste* liste, Info* info){
+   if(estVide(liste)){
+      return LISTE_VIDE;
+   }else{
 
+   }
 }
 
 Status supprimerEnQueue(Liste* liste, Info* info){

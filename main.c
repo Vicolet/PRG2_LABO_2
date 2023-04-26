@@ -24,6 +24,7 @@ int main() {
    printf("lptr.queue : 0x%p \n", lptr->queue);
 
    printf("Liste est vide : %d \n", estVide(lptr));
+   printf("Taille de la liste : %d\n", longueur(lptr));
 
    // Insérer en tête
    const Info i = 7;
@@ -33,6 +34,7 @@ int main() {
    printf("Element suivant : 0x%p \n", lptr->tete->suivant);
    printf("Element precedent : 0x%p \n", lptr->tete->suivant);
    printf("Liste est vide : %d \n", estVide(lptr));
+   printf("Taille de la liste : %d\n", longueur(lptr));
 
    const Info j = 6;
    insererEnTete(lptr, &j);
@@ -42,6 +44,7 @@ int main() {
           lptr->tete->suivant->info);
    printf("Element precedent : 0x%p \n", lptr->tete->precedent);
    printf("Liste est vide : %d \n", estVide(lptr));
+   printf("Taille de la liste : %d\n", longueur(lptr));
 
    const Info y = 2;
    insererEnTete(lptr, &y);
@@ -57,6 +60,7 @@ int main() {
           lptr->tete->suivant->suivant->info);
    printf("Queue : 0x%p, %d\n", lptr->queue, lptr->queue->info);
    printf("Liste est vide : %d \n", estVide(lptr));
+   printf("Taille de la liste : %d\n", longueur(lptr));
 
    return 0;
 }

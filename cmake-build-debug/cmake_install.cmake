@@ -1,4 +1,4 @@
-# Install script for directory: C:/HEIG/Semestre 2/PRG2/labo/Labo 2/PRG2_LABO_2
+# Install script for directory: C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/HEIG/Semestre 2/PRG2/labo/Labo 2/PRG2_LABO_2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

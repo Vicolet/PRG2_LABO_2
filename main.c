@@ -15,129 +15,67 @@
 #include <stdio.h>
 #include "listes_dynamiques.h"
 
-bool critere(size_t pos, const Info *n){
-   //return true;
-   if(pos % 2 == 0 || *n > 1 && *n < 6){
-      return true;
-   }
-   return false;
+bool critere(size_t pos, const Info *n) {
+    //return true;
+    if (pos % 2 == 0 || *n > 1 && *n < 6) {
+        return true;
+    }
+    return false;
 }
 
 int main() {
-   // Initialiser
-   Liste* lptr = initialiser();
+    printf("INITIALISATION de la liste.\n");
+    Liste *lptr1 = initialiser();
+    printf("%-20s %-20s %-20s \n", "Variable", "Adresse", "Adresse pointeur");
+    printf("%-20s %-20p %-20p \n", "lptr", (void *) &lptr1, (void *) lptr1);
+    printf("%-20s %-20p %-20p \n", "lptr->tete", (void *) &(lptr1->tete), lptr1->tete);
+    printf("%-20s %-20p %-20p \n", "lptr->queue", (void *) &(lptr1->queue), lptr1->queue);
 
-   printf("lptr : 0x%p \n", lptr);
-   printf("lptr.tete : 0x%p \n", lptr->tete);
-   printf("lptr.queue : 0x%p \n", lptr->queue);
+    printf("INITIALISATION : test des fonctions estVide() et longueur().\n");
+    printf("%-20s : %d \n", "Liste est vide", estVide(lptr1));
+    printf("%-20s : %lld \n", "Taille de la liste", longueur(lptr1));
 
-   printf("Liste est vide : %d \n", estVide(lptr));
-   printf("Taille de la liste : %lld\n", longueur(lptr));
+    printf("INITIALISATION : Affichage d'une liste vide. (FORWARD et BACKWARD)\n");
+    afficher(lptr1, FORWARD);
+    afficher(lptr1, BACKWARD);
+    printf("\n");
 
-   // Insérer en tête
-   const Info i = 7;
-   insererEnTete(lptr, &i);
 
-   printf("Element de tete : 0x%p , Valeur : %d\n", lptr->tete, lptr->tete->info);
-   printf("Element suivant : 0x%p \n", lptr->tete->suivant);
-   printf("Element precedent : 0x%p \n", lptr->tete->suivant);
-   printf("Liste est vide : %d \n", estVide(lptr));
-   printf("Taille de la liste : %lld\n", longueur(lptr));
+    printf("SUPPRIMER et INSERER en tete.\n");
+    printf("SUPPRIMER EN TETE : utiliser supprimerEnTete() sur une liste vide.\n");
+    Info x = 0;
+    printf("Status : %u\n", supprimerEnTete(lptr1, &x));
+    afficher(lptr1, FORWARD);
+    printf("INSERER EN TETE : utiliser insererEnTete() sur une liste pour inserer les chiffres de 0 a 5.\n");
+    x = 0;
+    printf("Status : %u\n", insererEnTete(lptr1, &x));
+    for (Info i = 1; i <= 5; ++i)
+        insererEnTete(lptr1, &i);
+    afficher(lptr1, FORWARD);
+    printf("SUPPRIMER EN TETE : utiliser supprimerEnTete() sur une liste non-vide.\n");
+    printf("Status : %u", supprimerEnTete(lptr1, &x));
+    printf(", Valeur supprimee : %d.\n", x);
+    afficher(lptr1, FORWARD);
+    printf("\n");
 
-   const Info j = 6;
-   insererEnTete(lptr, &j);
 
-   printf("Element de tete : 0x%p , Valeur : %d\n", lptr->tete, lptr->tete->info);
-   printf("Element suivant : 0x%p , Valeur : %d \n", lptr->tete->suivant,
-          lptr->tete->suivant->info);
-   printf("Element precedent : 0x%p \n", lptr->tete->precedent);
-   printf("Liste est vide : %d \n", estVide(lptr));
-   printf("Taille de la liste : %lld\n", longueur(lptr));
+    printf("SUPPRIMER et INSERER en queue.\n");
+    Liste *lptr2 = initialiser();
+    printf("SUPPRIMER EN QUEUE : utiliser supprimerEnQueue() sur une liste vide.\n");
+    Info y = 0;
+    printf("Status : %u\n", supprimerEnQueue(lptr2, &y));
+    afficher(lptr2, FORWARD);
+    printf("INSERER EN QUEUE : utiliser insererEnQueue() sur une liste pour inserer les chiffres de 0 a 5.\n");
+    y = 0;
+    printf("Status : %u\n", insererEnQueue(lptr2, &y));
+    for (Info i = 1; i <= 5; ++i)
+        insererEnQueue(lptr2, &i);
+    afficher(lptr2, FORWARD);
+    printf("SUPPRIMER EN QUEUE : utiliser supprimerEnQueue() sur une liste non-vide.\n");
+    printf("Status : %u", supprimerEnQueue(lptr2, &y));
+    printf(", Valeur supprimee : %d.\n", y);
+    afficher(lptr2, FORWARD);
 
-   const Info y = 2;
-   insererEnQueue(lptr, &y);
 
-   printf("Element de tete : 0x%p , Valeur : %d\n", lptr->tete, lptr->tete->info);
-   printf("Element suivant : 0x%p , Valeur : %d \n", lptr->tete->suivant,
-          lptr->tete->suivant->info);
-   printf("Element precedent : 0x%p \n", lptr->tete->precedent);
-   printf("suive prec : 0x%p, %d\n", lptr->tete->suivant->precedent,
-          lptr->tete->suivant->precedent->info);
-   printf("suiv : 0x%p, %d\n", lptr->tete->suivant, lptr->tete->suivant->info);
-   printf("suive suiv : 0x%p, %d\n", lptr->tete->suivant->suivant,
-          lptr->tete->suivant->suivant->info);
-   printf("Queue : 0x%p, %d\n", lptr->queue, lptr->queue->info);
-   printf("Liste est vide : %d \n", estVide(lptr));
-   printf("Taille de la liste : %lld\n", longueur(lptr));
-
-   // Supprimer tete
-   Info x;
-   supprimerEnTete(lptr, &x);
-   printf("\nAncien n : %d\n", x);
-   printf("Prec: 0x%p\n", lptr->tete->precedent);
-   printf("Tete: 0x%p, %d\n", lptr->tete, lptr->tete->info);
-   printf("Suiv: 0x%p, %d\n", lptr->tete->suivant, lptr->tete->suivant->info);
-   printf("Taille de la liste : %lld\n", longueur(lptr));
-
-   // Supprimer queue
-   supprimerEnQueue(lptr, &x);
-   printf("\nPrec: 0x%p\n", lptr->tete->precedent);
-   printf("Tete: 0x%p, %d\n", lptr->tete, lptr->tete->info);
-   printf("Suiv: 0x%p\n", lptr->tete->suivant);
-   printf("Taille de la liste : %lld\n", longueur(lptr));
-
-   // Vider
-   insererEnTete(lptr, &i);
-   insererEnTete(lptr, &j);
-   insererEnTete(lptr, &y);
-   insererEnTete(lptr, &j);
-   insererEnTete(lptr, &y);
-
-   /*
-   Element* eptr = lptr->tete->suivant->suivant;
-   printf("\n3eme: 0x%p\n", eptr);
-   printf("queue: 0x%p\n", lptr->queue);
-   supprimerEnQueue(lptr,&x);
-   printf("queue: 0x%p\n", lptr->queue);
-   supprimerEnQueue(lptr,&x);
-   printf("queue: 0x%p\n", lptr->queue);
-   supprimerEnQueue(lptr,&x);
-   printf("queue: 0x%p\n", lptr->queue);
-   */
-
-   printf("\ntaille: %lld\n", longueur(lptr));
-   vider(lptr, 0);
-   printf("\ntaille: %lld\n", longueur(lptr));
-
-   // égalité
-   Liste* l2ptr = initialiser();
-   Liste* l3ptr = initialiser();
-   insererEnTete(l2ptr, &i);
-   insererEnTete(l2ptr, &j);
-   insererEnTete(l2ptr, &y);
-   insererEnTete(l2ptr, &j);
-   insererEnTete(l2ptr, &y);
-
-   insererEnTete(l3ptr, &i);
-   insererEnTete(l3ptr, &j);
-   insererEnTete(l3ptr, &y);
-   insererEnTete(l3ptr, &j);
-   insererEnTete(l3ptr, &y);
-
-   printf("\nEgale: %d\n", sontEgales(l2ptr, l3ptr));
-   supprimerEnTete(l2ptr, &x);
-   printf("Egale: %d\n", sontEgales(l2ptr, l3ptr));
-   insererEnTete(l2ptr, &y);
-   printf("Egale: %d\n", sontEgales(l2ptr, l3ptr));
-
-   // Affichage
-   printf("\n");
-   afficher(l2ptr, FORWARD);
-   afficher(l2ptr, BACKWARD);
-
-   // SupprimerCritère
-   supprimerSelonCritere(l2ptr, critere);
-   afficher(l2ptr, FORWARD);
-
-   return 0;
+    return 0;
 }

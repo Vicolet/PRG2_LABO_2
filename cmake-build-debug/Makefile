@@ -128,6 +128,30 @@ Labo_2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo_2.dir\build.make CMakeFiles/Labo_2.dir/build
 .PHONY : Labo_2/fast
 
+BScode.obj: BScode.c.obj
+.PHONY : BScode.obj
+
+# target to build an object file
+BScode.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo_2.dir\build.make CMakeFiles/Labo_2.dir/BScode.c.obj
+.PHONY : BScode.c.obj
+
+BScode.i: BScode.c.i
+.PHONY : BScode.i
+
+# target to preprocess a source file
+BScode.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo_2.dir\build.make CMakeFiles/Labo_2.dir/BScode.c.i
+.PHONY : BScode.c.i
+
+BScode.s: BScode.c.s
+.PHONY : BScode.s
+
+# target to generate assembly for a file
+BScode.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo_2.dir\build.make CMakeFiles/Labo_2.dir/BScode.c.s
+.PHONY : BScode.c.s
+
 listes_dynamiques.obj: listes_dynamiques.c.obj
 .PHONY : listes_dynamiques.obj
 
@@ -152,30 +176,6 @@ listes_dynamiques.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo_2.dir\build.make CMakeFiles/Labo_2.dir/listes_dynamiques.c.s
 .PHONY : listes_dynamiques.c.s
 
-main_test.obj: main_test.c.obj
-.PHONY : main_test.obj
-
-# target to build an object file
-main_test.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo_2.dir\build.make CMakeFiles/Labo_2.dir/main_test.c.obj
-.PHONY : main_test.c.obj
-
-main_test.i: main_test.c.i
-.PHONY : main_test.i
-
-# target to preprocess a source file
-main_test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo_2.dir\build.make CMakeFiles/Labo_2.dir/main_test.c.i
-.PHONY : main_test.c.i
-
-main_test.s: main_test.c.s
-.PHONY : main_test.s
-
-# target to generate assembly for a file
-main_test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo_2.dir\build.make CMakeFiles/Labo_2.dir/main_test.c.s
-.PHONY : main_test.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +185,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Labo_2
+	@echo ... BScode.obj
+	@echo ... BScode.i
+	@echo ... BScode.s
 	@echo ... listes_dynamiques.obj
 	@echo ... listes_dynamiques.i
 	@echo ... listes_dynamiques.s
-	@echo ... main_test.obj
-	@echo ... main_test.i
-	@echo ... main_test.s
 .PHONY : help
 
 

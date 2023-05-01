@@ -5,9 +5,28 @@
 
 int main() {
     Liste *lptr = initialiser();
+    Info i = 1;
+    insererEnTete(lptr, &i);
+    afficher(lptr, FORWARD);
 
-    Info x;
-    printf("%s", supprimerEnQueue(lptr, &x));
+    i++;
+    insererEnTete(lptr, &i);
+    afficher(lptr, FORWARD);
 
+    i++;
+    insererEnTete(lptr, &i);
+    afficher(lptr, FORWARD);
 
+    Liste *rtpl = initialiser();
+    Info j = 1;
+    insererEnQueue(rtpl, &j);
+    afficher(rtpl, FORWARD);
+
+    j++;
+    insererEnQueue(rtpl, &j);
+    afficher(rtpl, FORWARD);
+
+    j++;
+    insererEnQueue(rtpl, &j);
+    afficher(rtpl, FORWARD);
 }

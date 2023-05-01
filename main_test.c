@@ -37,7 +37,7 @@ int main() {
 
     for (Info i = 3; i < 11; ++i)
         insererEnTete(lptr1, &i);
-    printf("Insertion en tete des chiffres allant de 5 a 9.\n");
+    printf("Insertion en tete des nombres allant de 5 a 10.\n");
     afficher(lptr1, FORWARD);
     printf("\n");
 
@@ -75,7 +75,18 @@ int main() {
     printf("%-30s : %d\n", "Vide", sontEgales(lptr1, lptr2));
     for (Info i = 0; i < 4; ++i)
         insererEnTete(lptr2, &i);
-    printf("%-30s : %d\n", "Meme infos, pas meme ordre", sontEgales(lptr1, lptr2));
+    for (Info i = 0; i < 4; ++i)
+        insererEnTete(lptr1, &i);
+    printf("%-30s : %d\n", "Meme infos, meme ordre", sontEgales(lptr1, lptr2));
+    for (Info i = 5; i < 10; ++i)
+        insererEnTete(lptr2, &i);
+    for (Info i = 10; i > 5; --i)
+        insererEnTete(lptr1, &i);
+    printf("%-30s : %d\n", "Meme infos, ordre different", sontEgales(lptr1, lptr2));
+    vider(lptr2, 0);
+    printf("%-30s : %d\n", "Differente taille", sontEgales(lptr1, lptr2));
+
+
 
 
 }

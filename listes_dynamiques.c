@@ -196,10 +196,11 @@ void vider(Liste *liste, size_t position) {
 	} else {
 		Element *eptr = liste->tete;
 		Info x;
-		for (size_t i = 0; i < position; i++) { eptr = eptr->suivant; }
-		while (liste->queue != eptr->precedent) {
+
+		for (size_t i = 0; i < position; i++)
+            eptr = eptr->suivant;
+		while (liste->queue != eptr->precedent)
 			supprimerEnQueue(liste, &x);
-		}
 	}
 }
 

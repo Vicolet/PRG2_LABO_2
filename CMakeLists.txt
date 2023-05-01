@@ -3,4 +3,4 @@ project(Labo_2 C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(Labo_2 main_test.c listes_dynamiques.c)
+add_executable(Labo_2 BScode.c listes_dynamiques.c)

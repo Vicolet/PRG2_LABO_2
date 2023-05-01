@@ -75,6 +75,39 @@ int main() {
     printf("Status : %u", supprimerEnQueue(lptr2, &y));
     printf(", Valeur supprimee : %d.\n", y);
     afficher(lptr2, FORWARD);
+    printf("\n");
+
+
+    printf("Test des ELEMENTS.\n");
+    Liste *lptr3 = initialiser();
+    for (Info i = 0; i <= 5; ++i)
+        insererEnTete(lptr3, &i);
+    afficher(lptr3, FORWARD);
+    printf("%-30s %-15d \n", "Element de tete", lptr3->tete->info);
+    printf("%-30s %-15d \n", "element suivant de tete", lptr3->tete->suivant->info);
+    printf("%-30s %-15d \n", "Element de queue", lptr3->queue->info);
+    printf("%-30s %-15d \n", "element precedent de queue", lptr3->queue->precedent->info);
+    printf("\n");
+
+
+    printf("EGALE : test de la fonction sontEgales().\n");
+    vider(lptr1, 0);
+    vider(lptr2, 0);
+    printf("%-30s %d\n", "Vide", sontEgales(lptr1, lptr2));
+    for (Info i = 0; i < 4; ++i)
+        insererEnTete(lptr2, &i);
+    for (Info i = 0; i < 4; ++i)
+        insererEnTete(lptr1, &i);
+    printf("%-30s %d\n", "Meme infos, meme ordre", sontEgales(lptr1, lptr2));
+    for (Info i = 5; i < 10; ++i)
+        insererEnTete(lptr2, &i);
+    for (Info i = 10; i > 5; --i)
+        insererEnTete(lptr1, &i);
+    printf("%-30s %d\n", "Meme infos, ordre different", sontEgales(lptr1, lptr2));
+    vider(lptr2, 0);
+    printf("%-30s %d\n", "Differente taille", sontEgales(lptr1, lptr2));
+    printf("\n");
+
 
 
     return 0;

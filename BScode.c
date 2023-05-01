@@ -5,28 +5,9 @@
 
 int main() {
     Liste *lptr = initialiser();
-    Info i = 1;
-    insererEnTete(lptr, &i);
+    for (Info i = 1; i <= 3; ++i)
+        insererEnQueue(lptr, &i);
     afficher(lptr, FORWARD);
-
-    i++;
-    insererEnTete(lptr, &i);
+    vider(lptr, 2);
     afficher(lptr, FORWARD);
-
-    i++;
-    insererEnTete(lptr, &i);
-    afficher(lptr, FORWARD);
-
-    Liste *rtpl = initialiser();
-    Info j = 1;
-    insererEnQueue(rtpl, &j);
-    afficher(rtpl, FORWARD);
-
-    j++;
-    insererEnQueue(rtpl, &j);
-    afficher(rtpl, FORWARD);
-
-    j++;
-    insererEnQueue(rtpl, &j);
-    afficher(rtpl, FORWARD);
 }

@@ -53,21 +53,21 @@ void afficher(const Liste *liste, Mode mode) {
 		printf("[]\n");
 	} else {
 		if (mode) { // forward
-			Element *eptr = liste->tete;
-			printf("[");
-			for (size_t i = 0; i < longueur(liste); i++) {
-				printf("%d", eptr->info);
-				if (i != longueur(liste) - 1) { printf(","); }
-				eptr = eptr->suivant;
-			}
-			printf("]\n");
-		} else { // backward
 			Element *eptr = liste->queue;
 			printf("[");
 			for (size_t i = 0; i < longueur(liste); i++) {
 				printf("%d", eptr->info);
 				if (i != longueur(liste) - 1) { printf(","); }
 				eptr = eptr->precedent;
+			}
+			printf("]\n");
+		} else { // backward
+			Element *eptr = liste->tete;
+			printf("[");
+			for (size_t i = 0; i < longueur(liste); i++) {
+				printf("%d", eptr->info);
+				if (i != longueur(liste) - 1) { printf(","); }
+				eptr = eptr->suivant;
 			}
 			printf("]\n");
 		}

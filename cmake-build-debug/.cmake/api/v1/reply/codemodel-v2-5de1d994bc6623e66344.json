@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Labo_2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Labo_2-Debug-5d8f695c2aeb45d0ea75.json",
+					"jsonFile" : "target-Labo_2-Debug-515af4914eea8affe98c.json",
 					"name" : "Labo_2",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/cmake-build-debug",
-		"source" : "C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2"
+		"build" : "C:/Users/victo/OneDrive/Documents/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/cmake-build-debug",
+		"source" : "C:/Users/victo/OneDrive/Documents/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2"
 	},
 	"version" : 
 	{

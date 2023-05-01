@@ -170,8 +170,8 @@ void supprimerSelonCritere(Liste *liste,
 		return;
 	} else {
 		Element *eptr = liste->tete;
-        size_t i = 0;
-        size_t p = 0;
+        size_t i = 0; // position physique dans la liste
+        size_t p = 0; // position relative dans la liste (paramètres de la fonction critère)
 		Info x;
 		while(eptr != NULL) {
 			if (critere(p, &eptr->info)) {

@@ -109,6 +109,7 @@ int main() {
     printf("\n");
 
 
+    printf("test de la fonction supprimerSelonCritere().\n");
 
     return 0;
 }

@@ -24,7 +24,7 @@ bool critere(size_t pos, const Info *n) {
 }
 
 int main() {
-    printf("INITIALISATION de la liste.\n");
+    printf("### INITIALISATION ###\n");
     Liste *lptr1 = initialiser();
     printf("%-20s %-20s %-20s \n", "Variable", "Adresse", "Adresse pointeur");
     printf("%-20s %-20p %-20p \n", "lptr", (void *) &lptr1, (void *) lptr1);
@@ -41,7 +41,7 @@ int main() {
     printf("\n");
 
 
-    printf("SUPPRIMER et INSERER en tete.\n");
+    printf("### SUPPRIMER ET INSERER EN TETE ###\n");
     printf("SUPPRIMER EN TETE : utiliser supprimerEnTete() sur une liste vide.\n");
     Info x = 0;
     printf("Status : %u\n", supprimerEnTete(lptr1, &x));
@@ -55,11 +55,14 @@ int main() {
     printf("SUPPRIMER EN TETE : utiliser supprimerEnTete() sur une liste non-vide.\n");
     printf("Status : %u", supprimerEnTete(lptr1, &x));
     printf(", Valeur supprimee : %d.\n", x);
+    printf("%-10s = ", "FORWARD");
     afficher(lptr1, FORWARD);
+    printf("%-10s = ", "BACKWARD");
+    afficher(lptr1, BACKWARD);
     printf("\n");
 
 
-    printf("SUPPRIMER et INSERER en queue.\n");
+    printf("### SUPPRIMER ET INSERER EN QUEUE ###\n");
     Liste *lptr2 = initialiser();
     printf("SUPPRIMER EN QUEUE : utiliser supprimerEnQueue() sur une liste vide.\n");
     Info y = 0;
@@ -74,11 +77,14 @@ int main() {
     printf("SUPPRIMER EN QUEUE : utiliser supprimerEnQueue() sur une liste non-vide.\n");
     printf("Status : %u", supprimerEnQueue(lptr2, &y));
     printf(", Valeur supprimee : %d.\n", y);
+    printf("%-10s = ", "FORWARD");
     afficher(lptr2, FORWARD);
+    printf("%-10s = ", "BACKWARD");
+    afficher(lptr2, BACKWARD);
     printf("\n");
 
 
-    printf("Test des ELEMENTS.\n");
+    printf("### ELEMENTS ###\n");
     Liste *lptr3 = initialiser();
     for (Info i = 0; i <= 5; ++i)
         insererEnTete(lptr3, &i);
@@ -90,7 +96,7 @@ int main() {
     printf("\n");
 
 
-    printf("EGALE : test de la fonction sontEgales().\n");
+    printf("### EGALITE ###\n");
     vider(lptr1, 0);
     vider(lptr2, 0);
     printf("%-30s %d\n", "Vide", sontEgales(lptr1, lptr2));
@@ -109,7 +115,7 @@ int main() {
     printf("\n");
 
 
-    printf("test de la fonction supprimerSelonCritere().\n");
+    printf("### SUPPRIMER SELON CRITERE ###\n");
 
     return 0;
 }

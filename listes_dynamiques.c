@@ -170,22 +170,30 @@ void supprimerSelonCritere(Liste *liste,
 		return;
 	} else {
 		Element *eptr = liste->tete;
+        size_t i = 0;
+        size_t p = 0;
 		Info x;
-		for (size_t i = 0; i < longueur(liste); i++) {
-			if (critere(i, &eptr->info)) {
+		while(eptr != NULL) {
+			if (critere(p, &eptr->info)) {
 				if (i == 0) { // effacer le premier
 					supprimerEnTete(liste, &x);
 				} else if (i == longueur(liste)) { // effacer le dernier
 					supprimerEnQueue(liste, &x);
+                    break; // superflu ?
 				} else { // Effacer au milieu
-					Element *tmp = eptr;
+					Element *tmp = eptr; // avancer dans la liste jusqu'a l'élément à supprimer
 					eptr->suivant->precedent = eptr->precedent;
 					eptr->precedent->suivant = eptr->suivant;
 					free(tmp);
 					tmp = NULL;
 				}
-			}
-			eptr = eptr->suivant;
+                eptr = liste->tete;
+                for(size_t j = 1; j < i; j++ ){eptr = eptr->suivant;}
+			}else{
+                i++;
+                eptr = eptr->suivant;
+            }
+            ++p;
 		}
 	}
 }

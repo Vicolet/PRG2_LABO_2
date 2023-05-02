@@ -1,7 +1,7 @@
 /*
  -----------------------------------------------------------------------------------
  Nom du fichier : main.h
- Auteur(s)      : Romain Fleury
+ Auteur(s)      : Romain Fleury, Nicolet Victor
  Date creation  : 26.04.2023
 
  Description    : Librairie permettant la gestion de listes doublement chaînées
@@ -41,7 +41,7 @@ int main() {
 
 	printf("\nINITIALISATION : test des fonctions estVide() et longueur().\n");
 	printf("%-20s : %d \n", "Liste est vide", estVide(lptr1));
-	printf("%-20s : %lld \n", "Taille de la liste", longueur(lptr1));
+	printf("%-20s : %zu \n", "Taille de la liste", longueur(lptr1));
 
 	printf("\nINITIALISATION : Affichage d'une liste vide.\n");
 	printf("FORWARD -> ");
@@ -224,7 +224,7 @@ int main() {
 	afficher(lptr2, FORWARD);
 	printf(" %6s %d", "=", sontEgales(lptr2, lptr1));
 	printf("\n");
-	
+
 	printf("\n-----====### SUPPRIMER SELON CRITERE ###====-----\n");
 
 	printf("\nLes criteres qui permette la suppression utilises pour la fonction "
@@ -237,7 +237,7 @@ int main() {
 
 	for (Info i = 0; i < tailleListe; ++i)
 		insererEnQueue(listeTestSupprimerSelonCritere, &i);
-	printf("\n%s %d %-12s : ","-Creation d'une liste de", tailleListe, "elements");
+	printf("\n%s %d %-12s : ", "-Creation d'une liste de", tailleListe, "elements");
 	afficher(listeTestSupprimerSelonCritere, FORWARD);
 	printf("\n");
 
@@ -246,7 +246,6 @@ int main() {
 	printf("%-40s : ", "-La liste apres supprimerSelonCritere()");
 	afficher(listeTestSupprimerSelonCritere, FORWARD);
 	printf("\n");
-
 
 	return 0;
 }

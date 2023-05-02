@@ -170,16 +170,16 @@ void supprimerSelonCritere(Liste *liste,
 		return;
 	} else {
 		Element *eptr = liste->tete;
-        size_t i = 0; // position physique dans la liste
-        size_t p = 0; // position relative dans la liste (paramètres de la fonction critère)
+		size_t i = 0; // position physique dans la liste
+		size_t p = 0; // position relative dans la liste (paramètres de la fonction critère)
 		Info x;
-		while(eptr != NULL) {
+		while (eptr != NULL) {
 			if (critere(p, &eptr->info)) {
 				if (i == 0) { // effacer le premier
 					supprimerEnTete(liste, &x);
 				} else if (i == longueur(liste)) { // effacer le dernier
 					supprimerEnQueue(liste, &x);
-                    break; // superflu ?
+					break; // superflu ?
 				} else { // Effacer au milieu
 					Element *tmp = eptr; // avancer dans la liste jusqu'a l'élément à supprimer
 					eptr->suivant->precedent = eptr->precedent;
@@ -187,13 +187,13 @@ void supprimerSelonCritere(Liste *liste,
 					free(tmp);
 					tmp = NULL;
 				}
-                eptr = liste->tete;
-                for(size_t j = 1; j < i; j++ ){eptr = eptr->suivant;}
-			}else{
-                i++;
-                eptr = eptr->suivant;
-            }
-            ++p;
+				eptr = liste->tete;
+				for (size_t j = 1; j < i; j++) { eptr = eptr->suivant; }
+			} else {
+				i++;
+				eptr = eptr->suivant;
+			}
+			++p;
 		}
 	}
 }
@@ -206,7 +206,7 @@ void vider(Liste *liste, size_t position) {
 		Info x;
 
 		for (size_t i = 0; i < position; i++)
-            eptr = eptr->suivant;
+			eptr = eptr->suivant;
 		while (liste->queue != eptr->precedent)
 			supprimerEnQueue(liste, &x);
 	}

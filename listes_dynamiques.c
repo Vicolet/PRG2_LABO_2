@@ -50,7 +50,7 @@ size_t longueur(const Liste *liste) {
 
 void afficher(const Liste *liste, Mode mode) {
 	if (estVide(liste)) {
-		printf("[]\n");
+		printf("[]");
 	} else {
 		if (mode) { // forward
 			Element *eptr = liste->queue;
@@ -60,7 +60,7 @@ void afficher(const Liste *liste, Mode mode) {
 				if (i != longueur(liste) - 1) { printf(","); }
 				eptr = eptr->precedent;
 			}
-			printf("]\n");
+			printf("]");
 		} else { // backward
 			Element *eptr = liste->tete;
 			printf("[");
@@ -69,7 +69,7 @@ void afficher(const Liste *liste, Mode mode) {
 				if (i != longueur(liste) - 1) { printf(","); }
 				eptr = eptr->suivant;
 			}
-			printf("]\n");
+			printf("]");
 		}
 	}
 }

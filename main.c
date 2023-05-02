@@ -88,65 +88,65 @@ int main() {
 	afficher(lptr2, BACKWARD);
 	printf("\n");
 
-	printf("====### VIDER ###====\n");
+    printf("-----====### VIDER ###====-----");
 
-	printf("\nVIDER : utiliser vider() sur une liste vide.\n");
-	Liste *listeTestVider = initialiser();
-	printf("%-45s : ", "-Initilisation d'une liste vide");
-	afficher(listeTestVider, FORWARD);
-	vider(listeTestVider, position);
-	printf("%s %-3zu : ", "-Apres utilisation de vider() en position", position);
-	afficher(listeTestVider, FORWARD);
+    printf("\n\nVIDER : utiliser vider() sur une liste vide.\n");
+    Liste *listeTestVider = initialiser();
+    printf("%-45s : ", "-Initilisation d'une liste vide");
+    afficher(listeTestVider, FORWARD);
+    vider(listeTestVider, position);
+    printf("\n%s %-3zu : ", "-Apres utilisation de vider() en position", position);
+    afficher(listeTestVider, FORWARD);
 
-	printf("\nVIDER : utiliser vider() sur une liste de un element.\n");
-	printf("%-45s : ", "-Ajout d'un element dans la liste");
-	x = 0;
-	insererEnQueue(listeTestVider, &x);
-	afficher(listeTestVider, FORWARD);
-	printf("%s %-3zu : ", "-Apres utilisation de vider() en position", position);
-	vider(listeTestVider, position);
-	afficher(listeTestVider, FORWARD);
+    printf("\n\nVIDER : utiliser vider() sur une liste de un element.\n");
+    printf("%-45s : ", "-Ajout d'un element dans la liste");
+    x = 0;
+    insererEnQueue(listeTestVider, &x);
+    afficher(listeTestVider, FORWARD);
+    printf("\n%s %-3zu : ", "-Apres utilisation de vider() en position", position);
+    vider(listeTestVider, position);
+    afficher(listeTestVider, FORWARD);
 
-	printf("\nVIDER : utiliser vider() sur une liste de plusieurs elements.\n");
-	printf("%-45s : ", "-Ajout de plusieurs elements dans la liste");
-	tailleListe = 10;
-	for (Info i = 0; i < tailleListe; ++i)
-		insererEnQueue(listeTestVider, &i);
-	afficher(listeTestVider, FORWARD);
-	position = 5;
-	printf("%s %-3zu : ", "-Apres utilisation de vider() en position", position);
-	vider(listeTestVider, position);
-	afficher(listeTestVider, FORWARD);
-	position = 2;
-	printf("%s %-3zu : ", "-Apres utilisation de vider() en position", position);
-	vider(listeTestVider, position);
-	afficher(listeTestVider, FORWARD);
-	position = 0;
-	printf("%s %-3zu : ", "-Apres utilisation de vider() en position", position);
-	vider(listeTestVider, position);
-	afficher(listeTestVider, FORWARD);
+    printf("\n\nVIDER : utiliser vider() sur une liste de plusieurs elements.\n");
+    printf("%-45s : ", "-Ajout de plusieurs elements dans la liste");
+    tailleListe = 10;
+    for (Info i = 0; i < tailleListe; ++i)
+        insererEnQueue(listeTestVider, &i);
+    afficher(listeTestVider, FORWARD);
+    position = 5;
+    printf("\n%s %-3zu : ", "-Apres utilisation de vider() en position", position);
+    vider(listeTestVider, position);
+    afficher(listeTestVider, FORWARD);
+    position = 2;
+    printf("\n%s %-3zu : ", "-Apres utilisation de vider() en position", position);
+    vider(listeTestVider, position);
+    afficher(listeTestVider, FORWARD);
+    position = 0;
+    printf("\n%s %-3zu : ", "-Apres utilisation de vider() en position", position);
+    vider(listeTestVider, position);
+    afficher(listeTestVider, FORWARD);
 
-	printf("\nVIDER : utiliser une position plus grande que la taille de la liste\n");
-	tailleListe = 5;
-	position = 6;
-	for (Info i = 0; i < tailleListe; ++i)
-		insererEnQueue(listeTestVider, &i);
-	printf("%-59s : ", "-Liste de base");
-	afficher(listeTestVider, FORWARD);
-	printf("%s %zu %s %d : ", "-Utiliser vider() en position",
-			 position, "sur une liste de longueur", tailleListe);
-	vider(listeTestVider, position);
-	afficher(listeTestVider, FORWARD);
-	printf("%-59s : ", "-Vider completement la liste");
-	position = 0;
-	vider(listeTestVider, position);
-	afficher(listeTestVider, FORWARD);
-	position = 3;
-	printf("%s %zu %-27s : ", "-Utiliser vider() en position",
-			 position, "sur une liste vide");
-	vider(listeTestVider, position);
-	afficher(listeTestVider, FORWARD);
-	printf("\n");
+    printf("\n\nVIDER : utiliser une position plus grande que la taille de la liste\n");
+    tailleListe = 5;
+    position = 6;
+    for (Info i = 0; i < tailleListe; ++i)
+        insererEnQueue(listeTestVider, &i);
+    printf("%-59s : ", "-Liste de base");
+    afficher(listeTestVider, FORWARD);
+    printf("\n%s %zu %s %d : ", "-Utiliser vider() en position",
+           position, "sur une liste de longueur", tailleListe);
+    vider(listeTestVider, position);
+    afficher(listeTestVider, FORWARD);
+    printf("\n%-59s : ", "-Vider completement la liste");
+    position = 0;
+    vider(listeTestVider, position);
+    afficher(listeTestVider, FORWARD);
+    position = 3;
+    printf("\n%s %zu %-27s : ", "-Utiliser vider() en position",
+           position, "sur une liste vide");
+    vider(listeTestVider, position);
+    afficher(listeTestVider, FORWARD);
+    printf("\n");
 
 	printf("===### ELEMENTS ###===\n");
 
@@ -168,24 +168,47 @@ int main() {
 			 "-Element precedent de queue", lptr3->queue->precedent->info);
 	printf("\n");
 
-	printf("### EGALITE ###\n");
-	vider(lptr1, 0);
-	vider(lptr2, 0);
-	printf("%-30s %d\n", "Vide", sontEgales(lptr1, lptr2));
-	for (Info i = 0; i < 4; ++i)
-		insererEnTete(lptr2, &i);
-	for (Info i = 0; i < 4; ++i)
-		insererEnTete(lptr1, &i);
-	printf("%-30s %d\n", "Meme infos, meme ordre",
-			 sontEgales(lptr1, lptr2));
-	for (Info i = 5; i < 10; ++i)
-		insererEnTete(lptr2, &i);
-	for (Info i = 10; i > 5; --i)
-		insererEnTete(lptr1, &i);
-	printf("%-30s %d\n", "Meme infos, ordre different", sontEgales(lptr1, lptr2));
-	vider(lptr2, 0);
-	printf("%-30s %d\n", "Differente taille", sontEgales(lptr1, lptr2));
-	printf("\n");
+    printf("===### EGALITE ###===\n");
+
+    printf("\nEGALITE : 1 = egales / 0 = non-egales\n");
+    vider(lptr1, 0);
+    vider(lptr2, 0);
+
+    printf("%-60s : ", "-Egalite de deux listes vides");
+    afficher(lptr1, FORWARD);
+    printf(" et ");
+    afficher(lptr2, FORWARD);
+    printf(" = %d", sontEgales(lptr2, lptr1));
+    printf("\n");
+
+    for (Info i = 0; i < 4; ++i)
+        insererEnTete(lptr2, &i);
+    for (Info i = 0; i < 4; ++i)
+        insererEnTete(lptr1, &i);
+    printf("%-60s : ", "-Egalite de deux listes de memes infos et meme ordre");
+    afficher(lptr1, FORWARD);
+    printf(" et ");
+    afficher(lptr2, FORWARD);
+    printf(" = %d", sontEgales(lptr2, lptr1));
+    printf("\n");
+
+    vider(lptr1, 0);
+    for (Info i = 4; i > 0; --i)
+        insererEnTete(lptr1, &i);
+    printf("%-60s : ", "-Egalite de deux listes de memes infos et d'ordre different");
+    afficher(lptr1, FORWARD);
+    printf(" et ");
+    afficher(lptr2, FORWARD);
+    printf(" = %d", sontEgales(lptr2, lptr1));
+    printf("\n");
+
+    vider(lptr2, 2);
+    printf("%-60s : ", "-Egalite de deux listes de differente taille");
+    afficher(lptr1, FORWARD);
+    printf(" et ");
+    afficher(lptr2, FORWARD);
+    printf(" = %d", sontEgales(lptr2, lptr1));
+    printf("\n");
 
 	//TODO tester supprimer critère avec un élément
 	//TODO implementer les tests pour supprimer selon critère

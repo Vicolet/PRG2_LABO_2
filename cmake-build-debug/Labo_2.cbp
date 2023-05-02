@@ -76,13 +76,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/BScode.c">
+			<Option target="Labo_2"/>
+		</Unit>
 		<Unit filename="C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/listes_dynamiques.c">
 			<Option target="Labo_2"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/listes_dynamiques.h">
-			<Option target="Labo_2"/>
-		</Unit>
-		<Unit filename="C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/main.c">
 			<Option target="Labo_2"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/CMakeLists.txt">

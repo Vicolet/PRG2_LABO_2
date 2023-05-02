@@ -68,19 +68,19 @@ include CMakeFiles/Labo_2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Labo_2.dir/flags.make
 
-CMakeFiles/Labo_2.dir/BScode.c.obj: CMakeFiles/Labo_2.dir/flags.make
-CMakeFiles/Labo_2.dir/BScode.c.obj: C:/Users/victo/OneDrive/Documents/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/BScode.c
-CMakeFiles/Labo_2.dir/BScode.c.obj: CMakeFiles/Labo_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\OneDrive\Documents\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Labo_2.dir/BScode.c.obj"
-	C:\Users\victo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Labo_2.dir/BScode.c.obj -MF CMakeFiles\Labo_2.dir\BScode.c.obj.d -o CMakeFiles\Labo_2.dir\BScode.c.obj -c C:\Users\victo\OneDrive\Documents\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\BScode.c
+CMakeFiles/Labo_2.dir/main.c.obj: CMakeFiles/Labo_2.dir/flags.make
+CMakeFiles/Labo_2.dir/main.c.obj: C:/Users/victo/OneDrive/Documents/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/main.c
+CMakeFiles/Labo_2.dir/main.c.obj: CMakeFiles/Labo_2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\OneDrive\Documents\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Labo_2.dir/main.c.obj"
+	C:\Users\victo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Labo_2.dir/main.c.obj -MF CMakeFiles\Labo_2.dir\main.c.obj.d -o CMakeFiles\Labo_2.dir\main.c.obj -c C:\Users\victo\OneDrive\Documents\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\main.c
 
-CMakeFiles/Labo_2.dir/BScode.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Labo_2.dir/BScode.c.i"
-	C:\Users\victo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\victo\OneDrive\Documents\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\BScode.c > CMakeFiles\Labo_2.dir\BScode.c.i
+CMakeFiles/Labo_2.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Labo_2.dir/main.c.i"
+	C:\Users\victo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\victo\OneDrive\Documents\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\main.c > CMakeFiles\Labo_2.dir\main.c.i
 
-CMakeFiles/Labo_2.dir/BScode.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Labo_2.dir/BScode.c.s"
-	C:\Users\victo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\victo\OneDrive\Documents\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\BScode.c -o CMakeFiles\Labo_2.dir\BScode.c.s
+CMakeFiles/Labo_2.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Labo_2.dir/main.c.s"
+	C:\Users\victo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\victo\OneDrive\Documents\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\main.c -o CMakeFiles\Labo_2.dir\main.c.s
 
 CMakeFiles/Labo_2.dir/listes_dynamiques.c.obj: CMakeFiles/Labo_2.dir/flags.make
 CMakeFiles/Labo_2.dir/listes_dynamiques.c.obj: C:/Users/victo/OneDrive/Documents/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/listes_dynamiques.c
@@ -98,13 +98,13 @@ CMakeFiles/Labo_2.dir/listes_dynamiques.c.s: cmake_force
 
 # Object files for target Labo_2
 Labo_2_OBJECTS = \
-"CMakeFiles/Labo_2.dir/BScode.c.obj" \
+"CMakeFiles/Labo_2.dir/main.c.obj" \
 "CMakeFiles/Labo_2.dir/listes_dynamiques.c.obj"
 
 # External object files for target Labo_2
 Labo_2_EXTERNAL_OBJECTS =
 
-Labo_2.exe: CMakeFiles/Labo_2.dir/BScode.c.obj
+Labo_2.exe: CMakeFiles/Labo_2.dir/main.c.obj
 Labo_2.exe: CMakeFiles/Labo_2.dir/listes_dynamiques.c.obj
 Labo_2.exe: CMakeFiles/Labo_2.dir/build.make
 Labo_2.exe: CMakeFiles/Labo_2.dir/linkLibs.rsp

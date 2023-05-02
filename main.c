@@ -209,6 +209,24 @@ int main() {
     afficher(lptr2, FORWARD);
     printf(" = %d", sontEgales(lptr2, lptr1));
     printf("\n");
+	printf("### EGALITE ###\n");
+	vider(lptr1, 0);
+	vider(lptr2, 0);
+	printf("%-30s %d\n", "Vide", sontEgales(lptr1, lptr2));
+	for (Info i = 0; i < 4; ++i)
+		insererEnTete(lptr2, &i);
+	for (Info i = 0; i < 4; ++i)
+		insererEnTete(lptr1, &i);
+	printf("%-30s %d\n", "Meme infos, meme ordre",
+			 sontEgales(lptr1, lptr2));
+	for (Info i = 5; i < 10; ++i)
+		insererEnTete(lptr2, &i);
+	for (Info i = 10; i > 5; --i)
+		insererEnTete(lptr1, &i);
+	printf("%-30s %d\n", "Meme infos, ordre different", sontEgales(lptr1, lptr2));
+	vider(lptr2, 0);
+	printf("%-30s %d\n", "Differente taille", sontEgales(lptr1, lptr2));
+	printf("\n");
 
 	//TODO tester supprimer critère avec un élément
 	//TODO implementer les tests pour supprimer selon critère

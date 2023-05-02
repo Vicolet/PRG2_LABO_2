@@ -49,8 +49,8 @@ int main() {
 
 	printf("%-20s %-20s %-15s \n", "Variable", "Adresse", "Valeur");
 	printf("%-20s %-20p %-15d \n", "Element de tete", lptr->tete, lptr->tete->info);
-	printf("%-20s %-20p %-15s \n", "Element suivant", lptr->tete->suivant, "-");// TODO voir si c'est possible le "-"
-	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent,"-");
+	printf("%-20s %-20p %-15s \n", "Element suivant", lptr->tete->suivant, "-");
+	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent, "-");
 
 	printf("\n");
 
@@ -65,8 +65,9 @@ int main() {
 
 	printf("%-20s %-20s %-15s \n", "Variable", "Adresse", "Valeur");
 	printf("%-20s %-20p %-15d \n", "Element de tete", lptr->tete, lptr->tete->info);
-	printf("%-20s %-20p %-15d \n", "Element suivant", lptr->tete->suivant,lptr->tete->suivant->info);
-	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent,"-");
+	printf("%-20s %-20p %-15d \n", "Element suivant", lptr->tete->suivant,
+			 lptr->tete->suivant->info);
+	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent, "-");
 
 	printf("\n");
 
@@ -80,12 +81,16 @@ int main() {
 	insererEnQueue(lptr, &y);
 
 	printf("%-20s %-20s %-15s \n", "Variable", "Adresse", "Valeur");
-	printf("%-20s %-20p %-15d \n", "Element de tete", lptr->tete,lptr->tete->info);
-	printf("%-20s %-20p %-15d \n", "Element suivant", lptr->tete->suivant,lptr->tete->suivant->info);
-	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent,"-");
-	printf("%-20s %-20p %-15d \n", "Suivant precedent",lptr->tete->suivant->precedent, lptr->tete->suivant->precedent->info);
-	printf("%-20s %-20p %-15d \n", "Suivant ", lptr->tete->suivant,lptr->tete->suivant->info);
-	printf("%-20s %-20p %-15d \n", "Suivant suivant",lptr->tete->suivant->suivant, lptr->tete->suivant->suivant->info);
+	printf("%-20s %-20p %-15d \n", "Element de tete", lptr->tete, lptr->tete->info);
+	printf("%-20s %-20p %-15d \n", "Element suivant", lptr->tete->suivant,
+			 lptr->tete->suivant->info);
+	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent, "-");
+	printf("%-20s %-20p %-15d \n", "Suivant precedent",
+			 lptr->tete->suivant->precedent, lptr->tete->suivant->precedent->info);
+	printf("%-20s %-20p %-15d \n", "Suivant ", lptr->tete->suivant,
+			 lptr->tete->suivant->info);
+	printf("%-20s %-20p %-15d \n", "Suivant suivant", lptr->tete->suivant->suivant,
+			 lptr->tete->suivant->suivant->info);
 	printf("%-20s %-20p %-15d \n", "Queue ", lptr->queue, lptr->queue->info);
 
 	printf("\n");
@@ -101,10 +106,11 @@ int main() {
 	supprimerEnTete(lptr, &x);
 
 	printf("%-20s %-20s %-15s \n", "Variable", "Adresse", "Valeur");
-	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent,"-");
-	printf("%-20s %-20p %-15d \n", "Element de tete", lptr->tete,lptr->tete->info);
-	printf("%-20s %-20p %-15d \n", "Element suivant", lptr->tete->suivant,lptr->tete->suivant->info);
-	printf("%-41s %lld \n", "Nouvelle taille de la liste :",longueur(lptr));
+	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent, "-");
+	printf("%-20s %-20p %-15d \n", "Element de tete", lptr->tete, lptr->tete->info);
+	printf("%-20s %-20p %-15d \n", "Element suivant", lptr->tete->suivant,
+			 lptr->tete->suivant->info);
+	printf("%-41s %lld \n", "Nouvelle taille de la liste :", longueur(lptr));
 
 	printf("\n");
 
@@ -112,10 +118,10 @@ int main() {
 	supprimerEnQueue(lptr, &x);
 
 	printf("%-20s %-20s %-15s \n", "Variable", "Adresse", "Valeur");
-	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent,"-");
-	printf("%-20s %-20p %-15d \n", "Element de tete", lptr->tete,lptr->tete->info);
-	printf("%-20s %-20p %-15s \n", "Element suivant", lptr->tete->suivant,"-");
-	printf("%-41s %lld \n", "Nouvelle taille de la liste :",longueur(lptr));
+	printf("%-20s %-20p %-15s \n", "Element precedent", lptr->tete->precedent, "-");
+	printf("%-20s %-20p %-15d \n", "Element de tete", lptr->tete, lptr->tete->info);
+	printf("%-20s %-20p %-15s \n", "Element suivant", lptr->tete->suivant, "-");
+	printf("%-41s %lld \n", "Nouvelle taille de la liste :", longueur(lptr));
 
 	printf("\n");
 

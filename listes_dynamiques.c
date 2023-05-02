@@ -7,7 +7,8 @@
  Description    : Librairie permettant la gestion de listes doublement chaînées
                   non circulaires
 
- Remarque(s)    : -
+ Remarque(s)    : le status "POSITION_NON_VALIDE" n'est jamais utilisé car la seule
+                  fonction qui utilise "position" ne retourne rien (void)
 
  Compilateur    : Mingw-w64 gcc 12.2.0
  -----------------------------------------------------------------------------------

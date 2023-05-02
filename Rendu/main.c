@@ -74,6 +74,7 @@ int main() {
 	printf("\n");
 
 
+
 	printf("\n-----====### SUPPRIMER ET INSERER EN QUEUE ###====-----\n");
 
 	Liste *lptr2 = initialiser();
@@ -112,6 +113,7 @@ int main() {
 
 	printf("\n\nVIDER : utiliser vider() sur une liste de un element.\n");
 	printf("%-45s : ", "-Ajout d'un element dans la liste");
+
 	x = 0;
 	insererEnQueue(listeTestVider, &x);
 	afficher(listeTestVider, FORWARD);
@@ -121,29 +123,43 @@ int main() {
 
 	printf("\n\nVIDER : utiliser vider() sur une liste de plusieurs elements.\n");
 	printf("%-45s : ", "-Ajout de plusieurs elements dans la liste");
+	
 	tailleListe = 10;
 	for (Info i = 0; i < tailleListe; ++i)
 		insererEnQueue(listeTestVider, &i);
 	afficher(listeTestVider, FORWARD);
+	
 	position = 5;
 	printf("\n%s %-3zu : ", "-Apres utilisation de vider() en position", position);
 	vider(listeTestVider, position);
 	afficher(listeTestVider, FORWARD);
+	
 	position = 2;
 	printf("\n%s %-3zu : ", "-Apres utilisation de vider() en position", position);
 	vider(listeTestVider, position);
 	afficher(listeTestVider, FORWARD);
+	
 	position = 0;
 	printf("\n%s %-3zu : ", "-Apres utilisation de vider() en position", position);
 	vider(listeTestVider, position);
 	afficher(listeTestVider, FORWARD);
 
+	
+	
+	
+	
+	
+	
+	
+	
 	printf(
 		"\n\nVIDER : utiliser une position plus grande que la taille de la liste\n");
+	
 	tailleListe = 5;
 	position = 6;
 	for (Info i = 0; i < tailleListe; ++i)
 		insererEnQueue(listeTestVider, &i);
+	
 	printf("%-59s : ", "-Liste de base");
 	afficher(listeTestVider, FORWARD);
 	printf("\n%s %zu %s %d : ", "-Utiliser vider() en position",
@@ -151,9 +167,11 @@ int main() {
 	vider(listeTestVider, position);
 	afficher(listeTestVider, FORWARD);
 	printf("\n%-59s : ", "-Vider completement la liste");
+	
 	position = 0;
 	vider(listeTestVider, position);
 	afficher(listeTestVider, FORWARD);
+	
 	position = 3;
 	printf("\n%s %zu %-27s : ", "-Utiliser vider() en position",
 			 position, "sur une liste vide");
@@ -169,6 +187,7 @@ int main() {
 	Liste *lptr3 = initialiser();
 	for (Info i = 0; i < tailleListe; ++i)
 		insererEnTete(lptr3, &i);
+	
 	printf("%s : ", "-Liste apres initialisation et ajouts d'elements");
 	afficher(lptr3, FORWARD);
 	printf("\n");

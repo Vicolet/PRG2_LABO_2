@@ -1,4 +1,4 @@
-C:\Users\victo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\victo\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2 -B C:\Users\victo\OneDrive\HEIG-VD\2022-2023\PRG2\PRG2_LABO_2\cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S "C:\HEIG\Semestre 2\PRG2\labo\Labo 2\PRG2_LABO_2" -B "C:\HEIG\Semestre 2\PRG2\labo\Labo 2\PRG2_LABO_2\cmake-build-debug"
 -- The C compiler identification is GNU 12.2.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
@@ -7,4 +7,4 @@ C:\Users\victo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/cmake-build-debug
+-- Build files have been written to: C:/HEIG/Semestre 2/PRG2/labo/Labo 2/PRG2_LABO_2/cmake-build-debug

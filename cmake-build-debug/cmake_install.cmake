@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/victo/OneDrive/Documents/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2
+# Install script for directory: C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/victo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/mingw64/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/victo/OneDrive/Documents/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/victo/OneDrive/HEIG-VD/2022-2023/PRG2/PRG2_LABO_2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

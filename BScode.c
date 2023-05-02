@@ -14,6 +14,10 @@ int main(void) {
 	int tailleListe = 0;
 	Info x = 0;
 
+	Liste *lptr1 = initialiser(), *lptr2 = initialiser();
+
+
+
 
 	return 0;
 }

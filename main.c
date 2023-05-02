@@ -193,7 +193,7 @@ int main() {
 	afficher(lptr1, FORWARD);
 	printf(" et ");
 	afficher(lptr2, FORWARD);
-	printf(" = %d", sontEgales(lptr2, lptr1));
+	printf(" %16s %d", "=", sontEgales(lptr2, lptr1));
 	printf("\n");
 
 	for (Info i = 0; i < 4; ++i)
@@ -204,7 +204,7 @@ int main() {
 	afficher(lptr1, FORWARD);
 	printf(" et ");
 	afficher(lptr2, FORWARD);
-	printf(" = %d", sontEgales(lptr2, lptr1));
+	printf(" %2s %d", "=", sontEgales(lptr2, lptr1));
 	printf("\n");
 
 	vider(lptr1, 0);
@@ -214,7 +214,7 @@ int main() {
 	afficher(lptr1, FORWARD);
 	printf(" et ");
 	afficher(lptr2, FORWARD);
-	printf(" = %d", sontEgales(lptr2, lptr1));
+	printf(" %2s %d", "=", sontEgales(lptr2, lptr1));
 	printf("\n");
 
 	vider(lptr2, 2);
@@ -222,9 +222,9 @@ int main() {
 	afficher(lptr1, FORWARD);
 	printf(" et ");
 	afficher(lptr2, FORWARD);
-	printf(" = %d", sontEgales(lptr2, lptr1));
+	printf(" %6s %d", "=", sontEgales(lptr2, lptr1));
 	printf("\n");
-
+	
 	printf("\n-----====### SUPPRIMER SELON CRITERE ###====-----\n");
 
 	printf("\nLes criteres qui permette la suppression utilises pour la fonction "
